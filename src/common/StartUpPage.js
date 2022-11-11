@@ -7,7 +7,8 @@ import {
   Dimensions,
 } from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
+// import LinearGradient from 'react-native-linear-gradient';
+import { useSelector } from 'react-redux';
 
 export default function StartUpPage(props,{navigation}) {
 
@@ -16,14 +17,17 @@ export default function StartUpPage(props,{navigation}) {
 
   const {width} = Dimensions.get('screen');
 
+  const {colors} = useSelector(state => state)
+
   return (
     <View style={[styles.container, {width: width}]}>
-      <LinearGradient
-        start={{x: 0, y: 1}}
-        end={{x: 0, y: 0.75}}
+      <View
+        // start={{x: 0, y: 1}}
+        // end={{x: 0, y: 0.75}}
         // locations={[.25,.5]}
-        style={styles.box}
-        colors={['#3462FF', '#466FFF']}>
+        style={[styles.box,{backgroundColor : colors?.gradients?.lightBlue?.first}]}
+        // colors={['#3462FF', '#466FFF']}
+        >
         <Text
           style={[styles.headingText, {fontSize: editHeadingSize ? 33 : 40}]}>
           {headingText}
@@ -34,7 +38,7 @@ export default function StartUpPage(props,{navigation}) {
             <Text style={styles.buttonText}>{buttonText}</Text>
           </TouchableOpacity>
         </Text>
-      </LinearGradient>
+      </View>
     </View>
   );
 }

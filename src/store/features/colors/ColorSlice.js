@@ -10,10 +10,10 @@ const colorReducer = createSlice({
     initialState,
     reducers : {
         setColors : (state,action) => {
-            state.colors = action.payload
+            state.colors = action?.payload
         }
     }
 })
 
-export const {setColors} = colorReducer.actions;
+export const {setColors} = colorReducer?.actions;
 export default  colorReducer.reducer

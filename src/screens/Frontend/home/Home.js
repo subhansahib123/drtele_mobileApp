@@ -26,7 +26,7 @@ export default function Home({navigation}) {
       }}
       showSkipButton 
       onSkip={()=>{
-        navigation.navigate('App Review')
+        navigation.navigate('')
       }}      
     />
   );

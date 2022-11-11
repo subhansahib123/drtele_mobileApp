@@ -23,6 +23,7 @@ import Settings from './../screens/Frontend/settings/Settings';
 import NoPage from '../screens/Frontend/404/NoPage';
 import AccountCreated from './../screens/auth/AccountCreated';
 import AppReview from './../screens/Frontend/appReview/AppReview';
+import OTP from '../screens/auth/otp/OTP';
 
 
 const Stack = createNativeStackNavigator();
@@ -141,6 +142,14 @@ export default function AppNavigator() {
         <Stack.Screen
         name='App Review'
           component={AppReview}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Phone Verification'
+          component={OTP}
           options={{
             headerTitleAlign : 'center',
             headerTitleStyle:{fontWeight : 'bold'},
