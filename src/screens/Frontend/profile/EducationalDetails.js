@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -14,7 +15,7 @@ export default function EducationalDetails({navigation}) {
   const {colors} = useSelector(state => state);
 
   return (
-    <View
+    <ScrollView
       style={[styles.container, {backgroundColor: colors.accent.shadowColor}]}>
       <View
         style={[styles.fieldsWrapper, {backgroundColor: colors.accent.white}]}>
@@ -73,7 +74,7 @@ export default function EducationalDetails({navigation}) {
           <Text style={styles.buttonText}>Save</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

@@ -22,11 +22,11 @@ export default function Home({navigation}) {
         return <item.component />;
       }}
       onDone = {()=>{
-        navigation.navigate('Personal Details')
+        navigation.navigate('BottomTabs')
       }}
       showSkipButton 
       onSkip={()=>{
-        navigation.navigate('')
+        navigation.navigate('Bottom Tabs')
       }}      
     />
   );

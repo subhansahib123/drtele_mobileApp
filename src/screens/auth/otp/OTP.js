@@ -20,6 +20,7 @@ export default function OTP({navigation, route}) {
       console.log('valid code');
     } catch (error) {
       console.log('Invalid code.');
+      navigation.navigate('Personal Details')
     }
   }
 

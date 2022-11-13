@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -16,7 +17,7 @@ export default function PersonalDetails({navigation}) {
   const {colors} = useSelector(state => state);
 
   return (
-    <View
+    <ScrollView
       style={[styles.container, {backgroundColor: colors.accent.shadowColor}]}>
       <View
         style={[styles.fieldsWrapper, {backgroundColor: colors.accent.white}]}>
@@ -154,7 +155,7 @@ export default function PersonalDetails({navigation}) {
           </Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

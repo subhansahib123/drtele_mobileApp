@@ -1,5 +1,5 @@
 import {
-    Modal,
+  Modal,
   Pressable,
   StyleSheet,
   Text,
@@ -10,17 +10,15 @@ import {
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-
-export default function ForgotPassword() {
+export default function ForgotPassword({navigation}) {
   const {colors} = useSelector(state => state);
- 
 
   return (
     <View
       style={[styles.container, {backgroundColor: colors.accent.shadowColor}]}>
       <View style={[styles.boxWrapper, {backgroundColor: colors.accent.white}]}>
         <View>
-          <Text style={[styles.headerText,{color : colors.accent.dark}]}>
+          <Text style={[styles.headerText, {color: colors.accent.dark}]}>
             We will send a code to the phone number you registered to regain
             your password
           </Text>
@@ -33,21 +31,25 @@ export default function ForgotPassword() {
               placeholder="Phone Number"
               keyboardType="number-pad"
               placeholderTextColor={colors.accent.grey}
-                 maxLength = {11}
-              style={{color : 'black'}}
+              maxLength={11}
+              style={{color: 'black'}}
             />
           </View>
           <Text style={styles.captiontext}>Code sent to +1*****123459</Text>
-          <View style={{paddingVertical : '7%'}}>
-
-          <TouchableOpacity activeOpacity={0.8} style={[styles.buttonWrapper,{backgroundColor : colors.gradients.lightBlue.second}]}>
-            <Text style={styles.buttonText}>Send</Text>
-          </TouchableOpacity>
+          <View style={{paddingVertical: '7%'}}>
+            <TouchableOpacity
+              activeOpacity={0.8}
+              style={[
+                styles.buttonWrapper,
+                {backgroundColor: colors.gradients.lightBlue.second},
+              ]}
+              onPress={()=>navigation.navigate('BottomTabs')}
+              >
+              <Text style={styles.buttonText}>Send</Text>
+            </TouchableOpacity>
           </View>
-
         </View>
       </View>
-   
     </View>
   );
 }
@@ -76,18 +78,17 @@ const styles = StyleSheet.create({
   captiontext: {
     marginHorizontal: '5%',
     textAlign: 'center',
-    fontSize : 17
+    fontSize: 17,
   },
   buttonWrapper: {
     marginHorizontal: '5%',
-    paddingVertical : 15,
-    borderRadius : 30
+    paddingVertical: 15,
+    borderRadius: 30,
   },
-  buttonText : {
-    color : '#FFFFFF',
-    textAlign : 'center',
-    fontWeight : 'bold',
-    fontSize : 15
+  buttonText: {
+    color: '#FFFFFF',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 15,
   },
-  
 });

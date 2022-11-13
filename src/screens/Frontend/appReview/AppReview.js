@@ -17,7 +17,7 @@ export default function AppReview() {
         <Text style={[styles.headerText, {color: colors?.accent?.dark}]}>
           Please rate the quality of service for the order
         </Text>
-        <RatingStars />
+        <RatingStars size={40}/>
         <View style={styles.bottomTextWrapper}>
           <Text style={styles.bottomText}>
             Your comments and suggestions help us improve the service quality

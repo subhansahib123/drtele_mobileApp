@@ -24,6 +24,19 @@ import NoPage from '../screens/Frontend/404/NoPage';
 import AccountCreated from './../screens/auth/AccountCreated';
 import AppReview from './../screens/Frontend/appReview/AppReview';
 import OTP from '../screens/auth/otp/OTP';
+import BookingSuccess from '../screens/Frontend/booking/BookingSuccess';
+import Location from '../screens/Frontend/location/Location';
+import AddPayment from '../screens/Frontend/payment/AddPayment';
+import PaymentMethod from '../screens/Frontend/payment/PaymentMethod';
+import Review from '../screens/Frontend/review/Review';
+import Booking from '../screens/Frontend/booking/Booking';
+import Category from '../screens/Frontend/category/Category';
+import DoctorDetails from '../screens/Frontend/doctorDetails/DoctorDetails';
+import HospitalDetails from '../screens/Frontend/hospitalDetails/HospitalDetails';
+import BookingReview from '../screens/Frontend/booking/BookingReview';
+import BookingHistory from '../screens/Frontend/booking/BookingHistory';
+import SearchDoctors from './../screens/Frontend/doctorDetails/SearchDoctors';
+import CallPage from '../screens/Frontend/call/CallPage';
 
 
 const Stack = createNativeStackNavigator();
@@ -153,6 +166,115 @@ export default function AppNavigator() {
           options={{
             headerTitleAlign : 'center',
             headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Booking Success'
+          component={BookingSuccess}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Location'
+          component={Location}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Add Payment Method'
+          component={AddPayment}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Payment Method'
+          component={PaymentMethod}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Review'
+          component={Review}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Booking'
+          component={Booking}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+          }}
+        />
+        <Stack.Screen
+        name='Category'
+          component={Category}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Doctor Details'
+          component={DoctorDetails}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Hospital Details'
+          component={HospitalDetails}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Booking Review'
+          component={BookingReview}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Booking History'
+          component={BookingHistory}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Search Doctors'
+          component={SearchDoctors}
+          options={{
+            headerTitleAlign : 'center',
+            headerTitleStyle:{fontWeight : 'bold'},
+            headerRight : () => <FontAwesomeIcon name='search' color={colors?.accent?.dark} size={20}/>
+          }}
+        />
+        <Stack.Screen
+        name='Call Page'
+          component={CallPage}
+          options={{
+            headerShown : false
           }}
         />
 
